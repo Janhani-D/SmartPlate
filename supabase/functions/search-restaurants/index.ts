@@ -52,7 +52,7 @@ For each restaurant, provide realistic data in this exact JSON format:
 Use realistic restaurant names and addresses for the location provided. Include varied price ranges and ratings. Use high-quality Unsplash food images (use format: https://images.unsplash.com/photo-XXXXX?w=400).`;
 
     const userPrompt = `User is looking for: "${query}"
-Location: ${location || 'New Delhi, India'}
+Location: ${location || 'Coimbatore, Tamil Nadu'}
 
 Suggest restaurants that match this craving. Return ONLY valid JSON, no additional text.`;
 
