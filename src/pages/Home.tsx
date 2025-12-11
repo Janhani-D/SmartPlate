@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { UtensilsCrossed, Map, MessageCircle, Sparkles, Star, Clock, IndianRupee } from "lucide-react";
+import { UtensilsCrossed, Map, MessageCircle, Sparkles, Star, IndianRupee } from "lucide-react";
 import { restaurants } from "@/data/restaurants";
 
 const Home = () => {
@@ -97,12 +97,7 @@ const Home = () => {
                 to={`/restaurants`}
                 className="group bg-card rounded-2xl overflow-hidden border border-border shadow-soft hover:shadow-card transition-all duration-300"
               >
-                <div className="relative h-32 overflow-hidden">
-                  <img
-                    src={restaurant.image}
-                    alt={restaurant.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
+                <div className="relative h-32 overflow-hidden bg-gradient-to-br from-primary/20 via-primary/10 to-transparent">
                   <div className="absolute top-2 right-2 bg-card/90 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1">
                     <Star className="w-3 h-3 fill-primary text-primary" />
                     <span className="text-xs font-semibold">{restaurant.rating}</span>
@@ -113,8 +108,8 @@ const Home = () => {
                   <p className="text-xs text-muted-foreground mb-2">{restaurant.cuisine.join(" • ")}</p>
                   <div className="flex items-center gap-3 text-xs text-muted-foreground">
                     <span className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      {restaurant.distance}
+                      <IndianRupee className="w-3 h-3" />
+                      ₹{restaurant.avgPriceForTwo} for two
                     </span>
                     <span className="flex items-center gap-1">
                       <IndianRupee className="w-3 h-3" />

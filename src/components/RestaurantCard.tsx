@@ -1,5 +1,5 @@
 import { Restaurant } from "@/data/restaurants";
-import { Star, MapPin, Clock, Leaf, Phone } from "lucide-react";
+import { Star, MapPin, Leaf, IndianRupee } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
@@ -21,14 +21,9 @@ const RestaurantCard = ({ restaurant, index = 0, isHighlighted = false }: Restau
       )}
       style={{ animationDelay: `${index * 100}ms` }}
     >
-      {/* Image */}
-      <div className="relative h-40 overflow-hidden">
-        <img
-          src={restaurant.image}
-          alt={restaurant.name}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
+      {/* Header with gradient */}
+      <div className="relative h-24 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent">
+        <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
         
         {/* Badges */}
         <div className="absolute top-3 left-3 flex gap-2">
@@ -44,12 +39,11 @@ const RestaurantCard = ({ restaurant, index = 0, isHighlighted = false }: Restau
         <div className="absolute top-3 right-3 flex items-center gap-1 bg-card/95 backdrop-blur-sm px-2 py-1 rounded-full shadow-sm">
           <Star className="w-4 h-4 fill-warm-amber text-warm-amber" />
           <span className="text-sm font-semibold text-foreground">{restaurant.rating}</span>
-          <span className="text-xs text-muted-foreground">({restaurant.reviews})</span>
         </div>
         
         {/* Name overlay */}
         <div className="absolute bottom-3 left-3 right-3">
-          <h3 className="font-display text-xl font-bold text-primary-foreground drop-shadow-lg">
+          <h3 className="font-display text-xl font-bold text-foreground drop-shadow-lg">
             {restaurant.name}
           </h3>
         </div>
@@ -71,41 +65,33 @@ const RestaurantCard = ({ restaurant, index = 0, isHighlighted = false }: Restau
           {restaurant.description}
         </p>
 
-        {/* Address */}
-        {restaurant.address && (
-          <div className="flex items-start gap-1.5 text-xs text-muted-foreground">
-            <MapPin className="w-3.5 h-3.5 text-primary mt-0.5 flex-shrink-0" />
-            <span className="line-clamp-2">{restaurant.address}</span>
-          </div>
-        )}
+        {/* Price info */}
+        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+          <MapPin className="w-3.5 h-3.5 text-primary flex-shrink-0" />
+          <span>Coimbatore</span>
+        </div>
 
         {/* Meta info */}
         <div className="flex items-center justify-between text-xs text-muted-foreground pt-2 border-t border-border/50">
           <div className="flex items-center gap-1">
-            <Clock className="w-3.5 h-3.5 text-primary" />
-            <span>{restaurant.openTime} - {restaurant.closeTime}</span>
+            <IndianRupee className="w-3.5 h-3.5 text-primary" />
+            <span>₹{restaurant.avgPriceForTwo} for two</span>
           </div>
           <div className="flex items-center text-warm-orange font-medium">
             {priceDisplay}
           </div>
-          {restaurant.phone && (
-            <div className="flex items-center gap-1">
-              <Phone className="w-3.5 h-3.5 text-primary" />
-              <span className="truncate max-w-[80px]">{restaurant.phone}</span>
-            </div>
-          )}
         </div>
 
-        {/* Specialties */}
+        {/* Popular Dishes */}
         <div className="pt-2">
           <p className="text-xs text-muted-foreground mb-1.5">Must try:</p>
           <div className="flex flex-wrap gap-1">
-            {restaurant.specialties.slice(0, 3).map((s) => (
+            {restaurant.popularDishes.slice(0, 3).map((dish) => (
               <span 
-                key={s} 
+                key={dish} 
                 className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full"
               >
-                {s}
+                {dish}
               </span>
             ))}
           </div>
