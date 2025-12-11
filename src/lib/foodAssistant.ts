@@ -201,10 +201,10 @@ export function getSurpriseRecommendation(): RecommendationResult {
   const surprise = weightedRestaurants[randomIndex];
 
   const funFacts = [
-    `With ${surprise.reviews} reviews and ${surprise.rating}⭐, this place is loved by many!`,
-    `Pro tip: Their ${surprise.specialties[0]} is absolutely legendary!`,
-    `Just ${surprise.distance} away - perfect for a quick trip!`,
-    `Open until ${surprise.closeTime} - plenty of time to get there!`,
+    `With a ${surprise.rating}⭐ rating, this place is loved by many!`,
+    surprise.popularDishes.length > 0 ? `Pro tip: Their ${surprise.popularDishes[0]} is absolutely legendary!` : `They have amazing ${surprise.cuisine[0]} cuisine!`,
+    `Average cost for two: ₹${surprise.avgPriceForTwo} - great value!`,
+    `Cuisines: ${surprise.cuisine.join(", ")} - perfect for your cravings!`,
   ];
 
   return {
