@@ -16,7 +16,7 @@ const Restaurants = () => {
   const [selectedPrice, setSelectedPrice] = useState("All");
   const [vegOnly, setVegOnly] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
-  const [location, setLocation] = useState("New Delhi, India");
+  const [location, setLocation] = useState("Coimbatore, Tamil Nadu");
   const [isAiSearching, setIsAiSearching] = useState(false);
   const [aiResults, setAiResults] = useState<Restaurant[] | null>(null);
 
