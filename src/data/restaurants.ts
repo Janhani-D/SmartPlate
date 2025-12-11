@@ -2,10 +2,11 @@ export interface Restaurant {
   id: string;
   name: string;
   cuisine: string[];
-  priceRange: 1 | 2 | 3; // 1 = budget, 2 = moderate, 3 = expensive
+  priceRange: 1 | 2 | 3;
   rating: number;
   reviews: number;
   location: string;
+  address: string;
   distance: string;
   openTime: string;
   closeTime: string;
@@ -14,7 +15,7 @@ export interface Restaurant {
   tags: string[];
   image: string;
   isVeg: boolean;
-  coordinates: { lat: number; lng: number };
+  phone?: string;
 }
 
 export const restaurants: Restaurant[] = [
@@ -26,6 +27,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.5,
     reviews: 342,
     location: "Near College Gate",
+    address: "45 College Road, Connaught Place, New Delhi 110001",
     distance: "0.3 km",
     openTime: "7:00 AM",
     closeTime: "11:00 PM",
@@ -34,7 +36,7 @@ export const restaurants: Restaurant[] = [
     tags: ["cheap", "filling", "comfort", "late-night", "budget", "hearty"],
     image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400",
     isVeg: false,
-    coordinates: { lat: 28.6139, lng: 77.2090 }
+    phone: "+91-11-2334-5678"
   },
   {
     id: "2",
@@ -44,6 +46,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.2,
     reviews: 189,
     location: "Main Market",
+    address: "12 Janpath Road, Main Market, New Delhi 110001",
     distance: "0.5 km",
     openTime: "11:00 AM",
     closeTime: "11:00 PM",
@@ -52,7 +55,7 @@ export const restaurants: Restaurant[] = [
     tags: ["cheesy", "pizza", "indulgent", "group", "party", "cheese"],
     image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400",
     isVeg: false,
-    coordinates: { lat: 28.6155, lng: 77.2100 }
+    phone: "+91-11-2345-6789"
   },
   {
     id: "3",
@@ -62,6 +65,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.0,
     reviews: 567,
     location: "University Road",
+    address: "78 University Road, North Campus, New Delhi 110007",
     distance: "0.2 km",
     openTime: "8:00 AM",
     closeTime: "12:00 AM",
@@ -70,7 +74,7 @@ export const restaurants: Restaurant[] = [
     tags: ["chai", "snacks", "hangout", "budget", "late-night", "study"],
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400",
     isVeg: true,
-    coordinates: { lat: 28.6125, lng: 77.2075 }
+    phone: "+91-11-2567-8901"
   },
   {
     id: "4",
@@ -80,6 +84,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.6,
     reviews: 423,
     location: "Food Street",
+    address: "23 Food Street, Karol Bagh, New Delhi 110005",
     distance: "0.8 km",
     openTime: "11:00 AM",
     closeTime: "10:30 PM",
@@ -88,7 +93,7 @@ export const restaurants: Restaurant[] = [
     tags: ["biryani", "special", "aromatic", "non-veg", "flavorful", "celebration"],
     image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400",
     isVeg: false,
-    coordinates: { lat: 28.6180, lng: 77.2120 }
+    phone: "+91-11-2678-9012"
   },
   {
     id: "5",
@@ -98,6 +103,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.3,
     reviews: 156,
     location: "Tech Park",
+    address: "B-42 Cyber Hub, Gurugram 122002",
     distance: "1.2 km",
     openTime: "9:00 AM",
     closeTime: "9:00 PM",
@@ -106,7 +112,7 @@ export const restaurants: Restaurant[] = [
     tags: ["healthy", "fresh", "light", "diet", "salad", "fitness"],
     image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400",
     isVeg: true,
-    coordinates: { lat: 28.6200, lng: 77.2150 }
+    phone: "+91-124-456-7890"
   },
   {
     id: "6",
@@ -116,6 +122,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.4,
     reviews: 678,
     location: "Street 4",
+    address: "Street 4, Majnu Ka Tilla, New Delhi 110054",
     distance: "0.4 km",
     openTime: "4:00 PM",
     closeTime: "11:00 PM",
@@ -124,7 +131,7 @@ export const restaurants: Restaurant[] = [
     tags: ["momos", "cheap", "snack", "spicy", "quick", "street-food"],
     image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=400",
     isVeg: false,
-    coordinates: { lat: 28.6145, lng: 77.2085 }
+    phone: "+91-11-2789-0123"
   },
   {
     id: "7",
@@ -134,6 +141,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.5,
     reviews: 289,
     location: "Railway Station Road",
+    address: "56 Station Road, Nizamuddin, New Delhi 110013",
     distance: "0.6 km",
     openTime: "6:00 AM",
     closeTime: "10:00 PM",
@@ -142,7 +150,7 @@ export const restaurants: Restaurant[] = [
     tags: ["breakfast", "dosa", "coffee", "budget", "morning", "light"],
     image: "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=400",
     isVeg: true,
-    coordinates: { lat: 28.6110, lng: 77.2060 }
+    phone: "+91-11-2890-1234"
   },
   {
     id: "8",
@@ -152,6 +160,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.1,
     reviews: 234,
     location: "Mall Road",
+    address: "DLF Mall, Vasant Kunj, New Delhi 110070",
     distance: "1.0 km",
     openTime: "11:00 AM",
     closeTime: "11:00 PM",
@@ -160,7 +169,7 @@ export const restaurants: Restaurant[] = [
     tags: ["burger", "fries", "american", "filling", "indulgent", "shake"],
     image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400",
     isVeg: false,
-    coordinates: { lat: 28.6190, lng: 77.2140 }
+    phone: "+91-11-2901-2345"
   },
   {
     id: "9",
@@ -170,6 +179,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.7,
     reviews: 512,
     location: "Civil Lines",
+    address: "89 Civil Lines, Old Delhi 110054",
     distance: "1.5 km",
     openTime: "12:00 PM",
     closeTime: "11:00 PM",
@@ -178,7 +188,7 @@ export const restaurants: Restaurant[] = [
     tags: ["premium", "celebration", "family", "tandoor", "special-occasion", "dinner"],
     image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400",
     isVeg: false,
-    coordinates: { lat: 28.6220, lng: 77.2180 }
+    phone: "+91-11-3012-3456"
   },
   {
     id: "10",
@@ -188,6 +198,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.3,
     reviews: 445,
     location: "Old Market",
+    address: "Chandni Chowk Market, Old Delhi 110006",
     distance: "0.7 km",
     openTime: "3:00 PM",
     closeTime: "10:00 PM",
@@ -196,7 +207,7 @@ export const restaurants: Restaurant[] = [
     tags: ["chaat", "tangy", "spicy", "street-food", "snack", "evening"],
     image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400",
     isVeg: true,
-    coordinates: { lat: 28.6165, lng: 77.2110 }
+    phone: "+91-11-3123-4567"
   },
   {
     id: "11",
@@ -206,6 +217,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.2,
     reviews: 178,
     location: "IT Park",
+    address: "Tower C, DLF IT Park, Noida 201301",
     distance: "1.3 km",
     openTime: "12:00 PM",
     closeTime: "10:30 PM",
@@ -214,7 +226,7 @@ export const restaurants: Restaurant[] = [
     tags: ["chinese", "noodles", "spicy", "saucy", "asian", "wok"],
     image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400",
     isVeg: false,
-    coordinates: { lat: 28.6210, lng: 77.2160 }
+    phone: "+91-120-456-7890"
   },
   {
     id: "12",
@@ -224,6 +236,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.6,
     reviews: 367,
     location: "Temple Road",
+    address: "Near Hanuman Temple, Lajpat Nagar, New Delhi 110024",
     distance: "0.9 km",
     openTime: "8:00 AM",
     closeTime: "9:00 PM",
@@ -232,7 +245,7 @@ export const restaurants: Restaurant[] = [
     tags: ["sweets", "dessert", "traditional", "celebration", "mithai", "sugar"],
     image: "https://images.unsplash.com/photo-1666190077212-c6f8a3d12311?w=400",
     isVeg: true,
-    coordinates: { lat: 28.6175, lng: 77.2095 }
+    phone: "+91-11-3234-5678"
   },
   {
     id: "13",
@@ -242,6 +255,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.4,
     reviews: 234,
     location: "Book Street",
+    address: "Khan Market, New Delhi 110003",
     distance: "0.5 km",
     openTime: "8:00 AM",
     closeTime: "10:00 PM",
@@ -250,7 +264,7 @@ export const restaurants: Restaurant[] = [
     tags: ["coffee", "study", "cozy", "wifi", "work", "cafe"],
     image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400",
     isVeg: true,
-    coordinates: { lat: 28.6135, lng: 77.2080 }
+    phone: "+91-11-3345-6789"
   },
   {
     id: "14",
@@ -260,6 +274,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.5,
     reviews: 312,
     location: "Night Market",
+    address: "Jama Masjid Lane, Old Delhi 110006",
     distance: "0.8 km",
     openTime: "5:00 PM",
     closeTime: "1:00 AM",
@@ -268,7 +283,7 @@ export const restaurants: Restaurant[] = [
     tags: ["kebab", "late-night", "grilled", "non-veg", "smoky", "meaty"],
     image: "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=400",
     isVeg: false,
-    coordinates: { lat: 28.6185, lng: 77.2130 }
+    phone: "+91-11-3456-7890"
   },
   {
     id: "15",
@@ -278,6 +293,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.3,
     reviews: 256,
     location: "Veg Corner",
+    address: "Sector 18, Noida 201301",
     distance: "0.6 km",
     openTime: "11:00 AM",
     closeTime: "10:00 PM",
@@ -286,7 +302,7 @@ export const restaurants: Restaurant[] = [
     tags: ["paneer", "vegetarian", "creamy", "rich", "curry", "comfort"],
     image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400",
     isVeg: true,
-    coordinates: { lat: 28.6150, lng: 77.2105 }
+    phone: "+91-120-567-8901"
   },
   {
     id: "16",
@@ -296,6 +312,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.7,
     reviews: 489,
     location: "College Square",
+    address: "Kamla Nagar Market, North Delhi 110007",
     distance: "0.2 km",
     openTime: "9:00 AM",
     closeTime: "9:00 PM",
@@ -304,7 +321,7 @@ export const restaurants: Restaurant[] = [
     tags: ["lassi", "refreshing", "cold", "summer", "drinks", "cooling"],
     image: "https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=400",
     isVeg: true,
-    coordinates: { lat: 28.6130, lng: 77.2088 }
+    phone: "+91-11-3567-8901"
   },
   {
     id: "17",
@@ -314,6 +331,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.2,
     reviews: 378,
     location: "Station Chowk",
+    address: "Rajiv Chowk Metro Station, New Delhi 110001",
     distance: "0.4 km",
     openTime: "11:00 AM",
     closeTime: "11:00 PM",
@@ -322,7 +340,7 @@ export const restaurants: Restaurant[] = [
     tags: ["roll", "quick", "portable", "filling", "wrap", "on-the-go"],
     image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400",
     isVeg: false,
-    coordinates: { lat: 28.6120, lng: 77.2070 }
+    phone: "+91-11-3678-9012"
   },
   {
     id: "18",
@@ -332,6 +350,7 @@ export const restaurants: Restaurant[] = [
     rating: 4.5,
     reviews: 534,
     location: "Park Road",
+    address: "India Gate Circle, New Delhi 110001",
     distance: "0.3 km",
     openTime: "11:00 AM",
     closeTime: "11:00 PM",
@@ -340,7 +359,7 @@ export const restaurants: Restaurant[] = [
     tags: ["ice-cream", "dessert", "sweet", "cold", "treat", "kulfi"],
     image: "https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=400",
     isVeg: true,
-    coordinates: { lat: 28.6142, lng: 77.2092 }
+    phone: "+91-11-3789-0123"
   }
 ];
 

@@ -9,7 +9,6 @@ import Home from "./pages/Home";
 import Restaurants from "./pages/Restaurants";
 import Chat from "./pages/Chat";
 import Login from "./pages/Login";
-import MapView from "./pages/MapView";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,7 +28,6 @@ const App = () => (
                 <Route path="/restaurants" element={<Restaurants />} />
                 <Route path="/chat" element={<Chat />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/map" element={<MapView />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
