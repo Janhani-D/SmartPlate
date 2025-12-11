@@ -11,6 +11,7 @@ export interface Restaurant {
   latitude: number;
   longitude: number;
   isVeg: boolean;
+  image: string;
 }
 
 export const restaurants: Restaurant[] = [
@@ -26,7 +27,8 @@ export const restaurants: Restaurant[] = [
     description: "Legendary South Indian non-veg restaurant known for spicy biryani and Chettinad dishes.",
     latitude: 11.017273,
     longitude: 76.955727,
-    isVeg: false
+    isVeg: false,
+    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400"
   },
   {
     id: "r02",
@@ -40,7 +42,8 @@ export const restaurants: Restaurant[] = [
     description: "Iconic vegetarian restaurant offering comfort food loved by students and families.",
     latitude: 11.018682,
     longitude: 76.949244,
-    isVeg: true
+    isVeg: true,
+    image: "https://images.unsplash.com/photo-1630383249896-424e482df921?w=400"
   },
   {
     id: "r03",
@@ -54,7 +57,8 @@ export const restaurants: Restaurant[] = [
     description: "Popular sweet shop known for fresh desserts and pastries.",
     latitude: 11.016259,
     longitude: 76.961160,
-    isVeg: true
+    isVeg: true,
+    image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400"
   },
   {
     id: "r04",
@@ -68,7 +72,8 @@ export const restaurants: Restaurant[] = [
     description: "Trendy dining space offering cheesy pastas, pizzas, and continental favorites.",
     latitude: 11.018953,
     longitude: 76.969374,
-    isVeg: false
+    isVeg: false,
+    image: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400"
   },
   {
     id: "r05",
@@ -82,7 +87,8 @@ export const restaurants: Restaurant[] = [
     description: "Aesthetic European-style cafe perfect for dates and luxury dining.",
     latitude: 11.017680,
     longitude: 76.972650,
-    isVeg: false
+    isVeg: false,
+    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400"
   },
   {
     id: "r06",
@@ -96,7 +102,8 @@ export const restaurants: Restaurant[] = [
     description: "Affordable vegetarian restaurant famous among college students for quick meals.",
     latitude: 11.018810,
     longitude: 76.966540,
-    isVeg: true
+    isVeg: true,
+    image: "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=400"
   },
   {
     id: "r07",
@@ -110,7 +117,8 @@ export const restaurants: Restaurant[] = [
     description: "Authentic spice-rich Chettinad cuisine.",
     latitude: 11.014762,
     longitude: 76.952835,
-    isVeg: false
+    isVeg: false,
+    image: "https://images.unsplash.com/photo-1545247181-516773cae754?w=400"
   },
   {
     id: "r08",
@@ -124,7 +132,8 @@ export const restaurants: Restaurant[] = [
     description: "Simple, comforting meals loved by students for affordable pricing.",
     latitude: 11.014180,
     longitude: 76.951370,
-    isVeg: true
+    isVeg: true,
+    image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400"
   },
   {
     id: "r09",
@@ -138,7 +147,8 @@ export const restaurants: Restaurant[] = [
     description: "Cheesy burgers and fast food items at pocket-friendly prices.",
     latitude: 11.017491,
     longitude: 76.957544,
-    isVeg: false
+    isVeg: false,
+    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400"
   },
   {
     id: "r10",
@@ -152,7 +162,8 @@ export const restaurants: Restaurant[] = [
     description: "Popular buffet restaurant with a wide selection of grilled starters.",
     latitude: 11.018745,
     longitude: 76.969225,
-    isVeg: false
+    isVeg: false,
+    image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=400"
   },
   {
     id: "r11",
@@ -166,7 +177,8 @@ export const restaurants: Restaurant[] = [
     description: "Classic vegetarian chain known for sweets and wholesome South Indian meals.",
     latitude: 11.015180,
     longitude: 76.963100,
-    isVeg: true
+    isVeg: true,
+    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400"
   },
   {
     id: "r12",
@@ -180,7 +192,8 @@ export const restaurants: Restaurant[] = [
     description: "Popular ice cream parlor with creative mix-in desserts.",
     latitude: 11.013352,
     longitude: 76.963892,
-    isVeg: true
+    isVeg: true,
+    image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400"
   },
   {
     id: "r13",
@@ -194,7 +207,8 @@ export const restaurants: Restaurant[] = [
     description: "Famous for spicy Kongu-style biryani and non-veg dishes.",
     latitude: 11.019990,
     longitude: 76.957230,
-    isVeg: false
+    isVeg: false,
+    image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=400"
   },
   {
     id: "r14",
@@ -208,7 +222,8 @@ export const restaurants: Restaurant[] = [
     description: "Upscale restaurant offering a mix of Indian and global cuisine.",
     latitude: 11.020980,
     longitude: 76.966180,
-    isVeg: false
+    isVeg: false,
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400"
   },
   {
     id: "r15",
@@ -222,7 +237,8 @@ export const restaurants: Restaurant[] = [
     description: "Casual cafe known for cheesy comfort food.",
     latitude: 11.018313,
     longitude: 76.970022,
-    isVeg: false
+    isVeg: false,
+    image: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=400"
   },
   {
     id: "r16",
@@ -236,7 +252,8 @@ export const restaurants: Restaurant[] = [
     description: "Affordable biryani loved by students.",
     latitude: 11.015603,
     longitude: 76.954620,
-    isVeg: false
+    isVeg: false,
+    image: "https://images.unsplash.com/photo-1642821373181-696a54913e93?w=400"
   },
   {
     id: "r17",
@@ -250,7 +267,8 @@ export const restaurants: Restaurant[] = [
     description: "Sweet, creamy thick shakes perfect for dessert cravings.",
     latitude: 11.019520,
     longitude: 76.953850,
-    isVeg: true
+    isVeg: true,
+    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400"
   },
   {
     id: "r18",
@@ -264,7 +282,8 @@ export const restaurants: Restaurant[] = [
     description: "Popular Arabian restaurant famous for BBQ and grilled chicken.",
     latitude: 11.016190,
     longitude: 76.952830,
-    isVeg: false
+    isVeg: false,
+    image: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=400"
   },
   {
     id: "r19",
@@ -278,7 +297,8 @@ export const restaurants: Restaurant[] = [
     description: "Trendy milkshake shop known for creamy shakes.",
     latitude: 11.016920,
     longitude: 76.955880,
-    isVeg: true
+    isVeg: true,
+    image: "https://images.unsplash.com/photo-1553787499-6f9133860278?w=400"
   },
   {
     id: "r20",
@@ -292,7 +312,8 @@ export const restaurants: Restaurant[] = [
     description: "Simple mess offering tasty, filling homestyle meals.",
     latitude: 11.017410,
     longitude: 76.953530,
-    isVeg: true
+    isVeg: true,
+    image: "https://images.unsplash.com/photo-1567337710282-00832b415979?w=400"
   }
 ];
 

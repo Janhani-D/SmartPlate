@@ -21,9 +21,14 @@ const RestaurantCard = ({ restaurant, index = 0, isHighlighted = false }: Restau
       )}
       style={{ animationDelay: `${index * 100}ms` }}
     >
-      {/* Header with gradient */}
-      <div className="relative h-24 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent">
-        <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
+      {/* Image Header */}
+      <div className="relative h-36 overflow-hidden">
+        <img 
+          src={restaurant.image} 
+          alt={restaurant.name}
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
         
         {/* Badges */}
         <div className="absolute top-3 left-3 flex gap-2">
