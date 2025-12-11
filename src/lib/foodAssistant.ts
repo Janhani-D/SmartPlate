@@ -145,8 +145,8 @@ function generateExplanation(restaurant: Restaurant, moods: string[], query: str
     explanations.push(`it matches what you're looking for`);
   }
 
-  const specialtyNote = restaurant.specialties.length > 0 
-    ? ` Their ${restaurant.specialties[0]} is a must-try!`
+  const specialtyNote = restaurant.popularDishes.length > 0 
+    ? ` Their ${restaurant.popularDishes[0]} is a must-try!`
     : "";
 
   return `Try **${restaurant.name}** because ${explanations.join(" and ")}!${specialtyNote}`;
