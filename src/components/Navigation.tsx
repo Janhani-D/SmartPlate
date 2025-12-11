@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, UtensilsCrossed, Map, MessageCircle, User, LogOut } from "lucide-react";
+import { Home, UtensilsCrossed, MessageCircle, User, LogOut } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import {
@@ -12,7 +12,6 @@ import {
 const navItems = [
   { path: "/", label: "Home", icon: Home },
   { path: "/restaurants", label: "Restaurants", icon: UtensilsCrossed },
-  { path: "/map", label: "Map", icon: Map },
   { path: "/chat", label: "AI Chat", icon: MessageCircle },
 ];
 

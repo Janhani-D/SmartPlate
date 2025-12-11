@@ -1,5 +1,5 @@
 import { Restaurant } from "@/data/restaurants";
-import { Star, MapPin, Clock, IndianRupee, Leaf } from "lucide-react";
+import { Star, MapPin, Clock, Leaf, Phone } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
@@ -71,12 +71,16 @@ const RestaurantCard = ({ restaurant, index = 0, isHighlighted = false }: Restau
           {restaurant.description}
         </p>
 
+        {/* Address */}
+        {restaurant.address && (
+          <div className="flex items-start gap-1.5 text-xs text-muted-foreground">
+            <MapPin className="w-3.5 h-3.5 text-primary mt-0.5 flex-shrink-0" />
+            <span className="line-clamp-2">{restaurant.address}</span>
+          </div>
+        )}
+
         {/* Meta info */}
         <div className="flex items-center justify-between text-xs text-muted-foreground pt-2 border-t border-border/50">
-          <div className="flex items-center gap-1">
-            <MapPin className="w-3.5 h-3.5 text-primary" />
-            <span>{restaurant.distance}</span>
-          </div>
           <div className="flex items-center gap-1">
             <Clock className="w-3.5 h-3.5 text-primary" />
             <span>{restaurant.openTime} - {restaurant.closeTime}</span>
@@ -84,6 +88,12 @@ const RestaurantCard = ({ restaurant, index = 0, isHighlighted = false }: Restau
           <div className="flex items-center text-warm-orange font-medium">
             {priceDisplay}
           </div>
+          {restaurant.phone && (
+            <div className="flex items-center gap-1">
+              <Phone className="w-3.5 h-3.5 text-primary" />
+              <span className="truncate max-w-[80px]">{restaurant.phone}</span>
+            </div>
+          )}
         </div>
 
         {/* Specialties */}
