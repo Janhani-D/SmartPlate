@@ -66,7 +66,7 @@ const Login = () => {
         } else {
           toast({
             title: "Account created!",
-            description: "Welcome to SmartDine.",
+            description: "Welcome to SmartPlate.",
           });
           navigate("/");
         }
@@ -90,7 +90,7 @@ const Login = () => {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl gradient-warm shadow-glow mb-4">
             <UtensilsCrossed className="w-8 h-8 text-primary-foreground" />
           </div>
-          <h1 className="text-2xl font-bold font-heading">SmartDine</h1>
+          <h1 className="text-2xl font-bold font-heading">SmartPlate</h1>
           <p className="text-muted-foreground text-sm">Your AI food discovery companion</p>
         </div>
 

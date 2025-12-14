@@ -1,12 +1,12 @@
 import Header from "@/components/Header";
-import SmartDineChat from "@/components/SmartDineChat";
+import SmartPlateChat from "@/components/SmartPlateChat";
 
 const Index = () => {
   return (
     <div className="min-h-screen gradient-subtle">
       <Header />
       <main>
-        <SmartDineChat />
+        <SmartPlateChat />
       </main>
     </div>
   );
