@@ -13,7 +13,7 @@ const Header = () => {
           </div>
           <div>
             <h1 className="font-display text-xl font-bold text-gradient">
-              SmartDine
+              SmartPlate
             </h1>
             <p className="text-xs text-muted-foreground -mt-0.5">
               Your Food Discovery Assistant

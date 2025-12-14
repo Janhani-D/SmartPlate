@@ -45,7 +45,7 @@ const Home = () => {
       <section className="py-12 md:py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 font-heading">
-            Why SmartDine?
+            Why SmartPlate?
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[

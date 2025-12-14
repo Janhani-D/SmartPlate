@@ -14,7 +14,7 @@ interface Message {
   restaurants?: Restaurant[];
 }
 
-const SmartDineChat = () => {
+const SmartPlateChat = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "greeting",
@@ -152,4 +152,4 @@ const SmartDineChat = () => {
   );
 };
 
-export default SmartDineChat;
+export default SmartPlateChat;
